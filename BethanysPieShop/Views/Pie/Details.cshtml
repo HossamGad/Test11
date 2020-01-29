@@ -1,0 +1,41 @@
+﻿@model Pie
+@using Microsoft.AspNetCore.Identity
+
+<h2>@Model.Name</h2>
+
+<div class="thumbnail">
+    <img alt="@Model.Name" src="@Model.ImageUrl">
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.Price</h3>
+        <h3>
+            <a href="#">@Model.Name</a>
+        </h3>
+        <h4>@Model.ShortDescription</h4>
+        <p>@Model.LongDescription</p>
+        <div class="addToCart">
+            <p class="button">
+                <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+                   asp-route-pieId="@Model.PieId">Add to cart</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="pull-right">
+    <!--
+        framräknat betygsgenomsnitt visas
+        ev kommentarer visas
+    -->
+    <h2>That's what our customers think</h2>
+
+    <div>
+        <p>
+            <a asp-controller="Commentary" asp-action="CommentaryD" asp-route-pieId="@Model.PieId">add your own review</a>
+        </p>
+    </div>
+</div>
+
+
+
+    <!--
+        inloggade användare kan lämna kommentar
+    -->

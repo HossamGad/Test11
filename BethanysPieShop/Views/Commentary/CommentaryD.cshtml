@@ -1,0 +1,26 @@
+﻿@model Commentary
+
+
+    <form asp-action="CommentaryD" method="post">
+        <h4> Your review </h4>
+        <div>
+            <input asp-for="PieId" value="@Context.Request.Query["pieId"]"  type="hidden" />
+        </div>
+        <!---
+    <div>
+        <label asp-for="CommentId">CommentId:</label>
+        <input asp-for="CommentId" value="@ViewBag.PieId" />
+    </div>
+        -->
+        <div>
+            <label asp-for="CommentMessage">Write your text here:</label>
+            <input asp-for="CommentMessage" />
+        </div>
+        <div>
+            <label asp-for="Rating">Star the Cake (1-5)</label>
+            <input asp-for="Rating" />
+        </div>
+        <div>
+            <input type="submit" value="Complete Review" />
+        </div>
+    </form>
