@@ -18,7 +18,7 @@ namespace BethanysPieShop.Models
         public DbSet<Pie> DbProduct { get; set; }
        // public DbSet<Contact> DbContact { get; set; }
         public DbSet<Commentary> DbCommentary { get; set; }
-        public DbSet<Grades> DbGrades { get; set; }
+        
         public DbSet<Category> Categories { get; set; }
         public DbSet<Pie> Pies { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
